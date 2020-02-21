@@ -1,5 +1,5 @@
 #!/bin/bash
-# Locator v1.0
+# Locator v1.1
 # Coded by: thelinuxchoice (You dont become a coder by just changing the credits)
 # Github: https://github.com/thelinuxchoice/locator
 
@@ -296,7 +296,7 @@ arch=$(uname -a | grep -o 'arm' | head -n1)
 arch2=$(uname -a | grep -o 'Android' | head -n1)
 if [[ $arch == *'arm'* ]] || [[ $arch2 == *'Android'* ]] ; then
 command -v wget > /dev/null 2>&1 || { echo >&2 "I require wget but it's not installed. Install it. Aborting."; exit 1; }
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip > /dev/null 2>&1
 
 if [[ -e ngrok-stable-linux-arm.zip ]]; then
 unzip ngrok-stable-linux-arm.zip > /dev/null 2>&1
@@ -310,7 +310,7 @@ fi
 
 
 else
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1 
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1 
 if [[ -e ngrok-stable-linux-386.zip ]]; then
 command -v unzip > /dev/null 2>&1 || { echo >&2 "I require unzip but it's not installed. Install it. Aborting."; exit 1; }
 unzip ngrok-stable-linux-386.zip > /dev/null 2>&1
@@ -379,9 +379,9 @@ printf "\e[1;93m (_)                             \e[0m\e[1;77m_                 
 printf "\e[1;77m  _        ___    ____  _____  _| |_  ___    ____  \e[0m\n"
 printf "\e[1;77m | |      / _ \  / ___)(____ |(_   _)/ _ \  / ___) \e[0m\n"
 printf "\e[1;77m | |_____| |_| |( (___ / ___ |  | |_| |_| || |     \e[0m\n"
-printf "\e[1;77m |_______)\___/  \____)\_____|   \__)\___/ |_|    v1.1 \e[0m\n"
+printf "\e[1;77m |_______)\___/  \____)\_____|   \__)\___/ |_|    v1.2 \e[0m\n"
 printf "\n"
-printf "\e[1;93m :::\e[0m\e[1;77m Coded by: @thelinuxchoice\e[0m\n"
+printf "\e[1;93m :::\e[0m\e[1;77m Coded by: @linux_choice\e[0m\n"
 
 }
 banner
